@@ -1,0 +1,12 @@
+C:\APP\test_battle_sea_1\test_battle_sea_1\bin\Debug\test_battle_sea_1.exe.config
+C:\APP\test_battle_sea_1\test_battle_sea_1\bin\Debug\test_battle_sea_1.exe
+C:\APP\test_battle_sea_1\test_battle_sea_1\bin\Debug\test_battle_sea_1.pdb
+C:\APP\test_battle_sea_1\test_battle_sea_1\obj\Debug\battle_sea.csproj.AssemblyReference.cache
+C:\APP\test_battle_sea_1\test_battle_sea_1\obj\Debug\battle_sea.csproj.SuggestedBindingRedirects.cache
+C:\APP\test_battle_sea_1\test_battle_sea_1\obj\Debug\test_battle_sea_1.Form1.resources
+C:\APP\test_battle_sea_1\test_battle_sea_1\obj\Debug\test_battle_sea_1.Properties.Resources.resources
+C:\APP\test_battle_sea_1\test_battle_sea_1\obj\Debug\battle_sea.csproj.GenerateResource.cache
+C:\APP\test_battle_sea_1\test_battle_sea_1\obj\Debug\battle_sea.csproj.CoreCompileInputs.cache
+C:\APP\test_battle_sea_1\test_battle_sea_1\obj\Debug\test_battle_sea_1.exe
+C:\APP\test_battle_sea_1\test_battle_sea_1\obj\Debug\test_battle_sea_1.pdb
+C:\APP\test_battle_sea_1\test_battle_sea_1\obj\Debug\test_battle_sea_1.Form2.resources

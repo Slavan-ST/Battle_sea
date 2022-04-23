@@ -14,7 +14,6 @@ namespace test_battle_sea_1
 {
     public partial class Form1 : Form
     {
-
         //Переменные
 
         int difficulty = 0; // сложность 
@@ -41,7 +40,6 @@ namespace test_battle_sea_1
         Image Ship_miss_player_ship_image = Properties.Resources.Sqare_miss_player;
 
         int x = 200, y = 100;
-
 
 
         public Form1()
@@ -466,6 +464,16 @@ namespace test_battle_sea_1
 
         private void Respawn()
         {
+            visible_label();
+            label2.Visible = false;
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    field_bot[i, j].Visible = true;
+                    field_player[i, j].Visible = true;
+                }
+            }
             player_move = true;
             score_bot = 0;
             score_player = 0;
@@ -489,6 +497,7 @@ namespace test_battle_sea_1
             }
         }
 
+
         // следующие 2 функции - клик по полю /////////////////////////
         private void Click_Field_Bot(object sender, EventArgs e)
         {
@@ -501,7 +510,6 @@ namespace test_battle_sea_1
                         if (sender == field_bot[i, j])
                         {
                             if (field_bot[i, j].BackgroundImage == Ship_bot_image ||
-                                field_bot[i, j].BackgroundImage == Ship_miss_player_ship_image ||
                                 field_bot[i, j].BackgroundImage == Ship_there_image)
                             {
                                 field_bot[i, j].BackgroundImage = Ship_hit_image;
@@ -514,6 +522,8 @@ namespace test_battle_sea_1
                                 {
                                     label2.Visible = true;
                                     label2.Text = "Вы победили!";
+
+                                    visible_label();
                                 }
                             }
                             if (field_bot[i, j].BackgroundImage == Sqare_image ||
@@ -555,6 +565,7 @@ namespace test_battle_sea_1
                                 {
                                     label2.Visible = true;
                                     label2.Text = "Вы проиграли!";
+                                    visible_label();
                                 }
                                 if (Proverka_II_player_field(i, j) == false)
                                 {
@@ -608,6 +619,7 @@ namespace test_battle_sea_1
                                     }
                                 }
                             }
+                            else break;
                         }
                     }
                     if (i == 1)
@@ -631,6 +643,7 @@ namespace test_battle_sea_1
                                     }
                                 }
                             }
+                            else break;
                         }
                     }
                     if (i == 2)
@@ -654,6 +667,7 @@ namespace test_battle_sea_1
                                     }
                                 }
                             }
+                            else break;
                         }
                     }
                     if (i == 3)
@@ -677,6 +691,7 @@ namespace test_battle_sea_1
                                     }
                                 }
                             }
+                            else break;
                         }
                     }
 
@@ -713,6 +728,7 @@ namespace test_battle_sea_1
                                     }
                                 }
                             }
+                            else break;
                         }
                     }
                     if (i == 1)
@@ -736,6 +752,7 @@ namespace test_battle_sea_1
                                     }
                                 }
                             }
+                            else break;
                         }
                     }
                     if (i == 2)
@@ -759,6 +776,7 @@ namespace test_battle_sea_1
                                     }
                                 }
                             }
+                            else break;
                         }
                     }
                     if (i == 3)
@@ -782,6 +800,7 @@ namespace test_battle_sea_1
                                     }
                                 }
                             }
+                            else break;
                         }
                     }
 
@@ -1031,12 +1050,26 @@ namespace test_battle_sea_1
             return ship_bool;
         }
 
-        //Проверка для хода бота
         private void button3_Click(object sender, EventArgs e)
         {
-            player_move = false;
-            timer1.Start();
+            Form2 form2 = new Form2();
+            form2.Show();
         }
+        private void visible_label()
+        {
+            Form1 form = new Form1();
+            label2.Visible = true;
+            label2.Location = new Point(form.Width / 2, form.Height / 2 - label2.Height);
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    field_bot[i, j].Visible = !field_bot[i, j].Visible;
+                    field_player[i, j].Visible = !field_player[i, j].Visible;
+                }
+            }
+        }
+
 
         //Бот "Easy"
         private void Bot_Logik()
@@ -1051,6 +1084,5 @@ namespace test_battle_sea_1
             }
             Click_Field_Player(field_player[random_Y, random_X]);
         }
-
     }
 }
